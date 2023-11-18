@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4bwt3gw7a8fu"]
+
+[ext_resource type="PackedScene" uid="uid://cgwxqdbcurj8v" path="res://scenes/ground_movement.tscn" id="1_kon0y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pdhi"]
+size = Vector2(1928, 20)
+
+[node name="Area2D" type="StaticBody2D"]
+texture_filter = 1
+texture_repeat = 2
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_kon0y")]
+follow_viewport_scale = 182.818
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(957, 1070)
+shape = SubResource("RectangleShape2D_2pdhi")

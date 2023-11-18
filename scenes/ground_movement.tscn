@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgwxqdbcurj8v"]
+
+[ext_resource type="Script" path="res://scripts/ground_movement.gd" id="1_6spky"]
+[ext_resource type="Texture2D" uid="uid://c41iah5abddr7" path="res://assets/sprites/ground.png" id="1_ntlwa"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
+script = ExtResource("1_6spky")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+
+[node name="Ground" type="Sprite2D" parent="ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 1071)
+texture = ExtResource("1_ntlwa")
+centered = false
+region_enabled = true
+region_rect = Rect2(109.515, 0.229, 1920, 9.323)
+region_filter_clip_enabled = true
